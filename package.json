@@ -17,7 +17,7 @@
   },
   "scripts": {
     "build": "webpack --watch --config webpack.config.js",
-    "start": "npm run build & npm run start-dev",
+    "start": "npm run start-dev",
     "start-dev": "npm run build & node ./bin/server.js"
   },
   "license": "MIT",

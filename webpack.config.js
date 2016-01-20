@@ -4,6 +4,7 @@ module.exports = {
     context: __dirname,
     entry: [
         'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000',
+        'webpack/hot/only-dev-server',
         __dirname + '/example/index.js'
     ],
     output: {
