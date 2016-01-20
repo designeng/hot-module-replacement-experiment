@@ -1,6 +1,5 @@
 var express = require('express');
 var app = express();
-var server = require('http').Server(app);
 var webpack = require('webpack');
 var webpackDevMiddleware = require('webpack-dev-middleware');
 var webpackHotMiddleware = require('webpack-hot-middleware');
@@ -24,12 +23,12 @@ app.use(function(req, res, next) {
     next(err);
 });
 
-server.listen(port, err => {
-    if (err) {
-        console.error(err);
-        return;
-    }
-    console.log('navigate to http://localhost:' + port);
-});
+app.listen(port, function(error) {
+  if (error) {
+    console.error(error)
+  } else {
+    console.info("==> 🌎  Listening on port %s. Open up http://localhost:%s/ in your browser.", port, port)
+  }
+})
 
 module.exports = app;

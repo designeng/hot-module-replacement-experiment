@@ -1,4 +1,4 @@
-console.log("Index...12345");
+console.log("Index...12345123");
 
 if (module.hot) {
   console.log("HOT REPLACEMENT INITED");
